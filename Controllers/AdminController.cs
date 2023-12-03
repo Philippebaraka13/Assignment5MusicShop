@@ -1,76 +1,35 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using Assignment5MusicShop.Data;
+﻿using Assignment5MusicShop.Data;
 using Assignment5MusicShop.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Assignment5MusicShop.Controllers
 {
-    public class MusicsController : Controller
+    public class AdminController : Controller
     {
         private readonly Assignment5MusicShopContext _context;
 
-        public MusicsController(Assignment5MusicShopContext context)
+        public AdminController(Assignment5MusicShopContext context)
         {
             _context = context;
         }
 
-        // GET: Musics
-        public async Task<IActionResult> Index(string searchGenre)
+        // GET: Admin
+        public async Task<IActionResult> Index()
         {
-            // Fetch the list of genres from the database
-            var genresQuery = _context.Music.Select(m => m.Genre).Distinct();
-
-            // Use ViewBag to pass the list of genres to the view
-            ViewBag.Genres = new SelectList(await genresQuery.ToListAsync());
-
-            // Query for music; filter by genre if searchGenre is provided
-            var musicQuery = _context.Music.AsQueryable();
-
-            if (!string.IsNullOrEmpty(searchGenre))
-            {
-                musicQuery = musicQuery.Where(m => m.Genre == searchGenre);
-            }
-
-            var musicList = await musicQuery.ToListAsync();
-            return View(musicList);
+            return View(await _context.Music.ToListAsync());
         }
 
-
-        // GET: Musics/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null || _context.Music == null)
-            {
-                return NotFound();
-            }
-
-            var music = await _context.Music
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (music == null)
-            {
-                return NotFound();
-            }
-
-            return View(music);
-        }
-
-        // GET: Musics/Create
+        // GET: Admin/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Musics/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: Admin/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,Performer,Genre,Price,Year")] Music music)
+        public async Task<IActionResult> Create([Bind("Title,Performer,Genre,Price,Year")] Music music)
         {
             if (ModelState.IsValid)
             {
@@ -81,10 +40,10 @@ namespace Assignment5MusicShop.Controllers
             return View(music);
         }
 
-        // GET: Musics/Edit/5
+        // GET: Admin/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.Music == null)
+            if (id == null)
             {
                 return NotFound();
             }
@@ -97,9 +56,7 @@ namespace Assignment5MusicShop.Controllers
             return View(music);
         }
 
-        // POST: Musics/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: Admin/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Performer,Genre,Price,Year")] Music music)
@@ -132,10 +89,10 @@ namespace Assignment5MusicShop.Controllers
             return View(music);
         }
 
-        // GET: Musics/Delete/5
+        // GET: Admin/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.Music == null)
+            if (id == null)
             {
                 return NotFound();
             }
@@ -150,28 +107,23 @@ namespace Assignment5MusicShop.Controllers
             return View(music);
         }
 
-        // POST: Musics/Delete/5
+        // POST: Admin/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.Music == null)
-            {
-                return Problem("Entity set 'Assignment5MusicShopContext.Music'  is null.");
-            }
             var music = await _context.Music.FindAsync(id);
             if (music != null)
             {
                 _context.Music.Remove(music);
+                await _context.SaveChangesAsync();
             }
-            
-            await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool MusicExists(int id)
         {
-          return (_context.Music?.Any(e => e.Id == id)).GetValueOrDefault();
+            return _context.Music.Any(e => e.Id == id);
         }
     }
 }
