@@ -1,5 +1,22 @@
 ﻿@model IEnumerable<Assignment5MusicShop.Models.Music>
 
+@using Microsoft.AspNetCore.Mvc.Rendering
+
+@{
+    ViewData["Title"] = "Music List";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form asp-action="Index" method="get">
+    <div class="form-group">
+        <label for="genreDropdown">Genre:</label>
+        <select id="genreDropdown" name="searchGenre" asp-items="ViewBag.Genres" class="form-control">
+            <option value="">All Genres</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>
 @{
     ViewData["Title"] = "Index";
 }
