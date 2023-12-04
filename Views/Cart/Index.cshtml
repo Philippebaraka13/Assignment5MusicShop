@@ -29,7 +29,7 @@ else
                     <td>@item.Title</td>
                     <td>@item.Price.ToString("C")</td>
                     <td>@item.Quantity</td>
-                    <td>@(item.Price * item.Quantity).ToString("C")</td>
+                    <td>@((item.Price * item.Quantity).ToString("C"))</td>
                     <td>
                         <form asp-action="RemoveFromCart" asp-route-id="@item.MusicId" method="post">
                             <input type="submit" value="Remove" class="btn btn-danger" />

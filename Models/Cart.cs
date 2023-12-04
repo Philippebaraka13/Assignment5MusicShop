@@ -22,7 +22,11 @@
         public void RemoveItem(int musicId)
         {
             var item = Items.FirstOrDefault(i => i.MusicId == musicId);
-            if (item != null)
+            if(item.Quantity > 1)
+            {
+                item.Quantity--;
+            }
+            else
             {
                 Items.Remove(item);
             }
