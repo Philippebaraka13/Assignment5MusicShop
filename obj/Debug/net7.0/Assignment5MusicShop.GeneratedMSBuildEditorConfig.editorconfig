@@ -9,65 +9,65 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Assignment5MusicShop
 build_property.RootNamespace = Assignment5MusicShop
-build_property.ProjectDir = C:\Users\kamok\Source\Repos\Assignment5MusicShopDec6\
+build_property.ProjectDir = C:\Users\Chris\Source\Repos\Assignment5MusicShopDec6\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\kamok\Source\Repos\Assignment5MusicShopDec6
+build_property.MSBuildProjectDirectory = C:\Users\Chris\Source\Repos\Assignment5MusicShopDec6
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/kamok/Source/Repos/Assignment5MusicShopDec6/Views/Admin/Creates.cshtml]
+[C:/Users/Chris/Source/Repos/Assignment5MusicShopDec6/Views/Admin/Creates.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kamok/Source/Repos/Assignment5MusicShopDec6/Views/Cart/Index.cshtml]
+[C:/Users/Chris/Source/Repos/Assignment5MusicShopDec6/Views/Cart/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kamok/Source/Repos/Assignment5MusicShopDec6/Views/Home/Index.cshtml]
+[C:/Users/Chris/Source/Repos/Assignment5MusicShopDec6/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kamok/Source/Repos/Assignment5MusicShopDec6/Views/Home/Privacy.cshtml]
+[C:/Users/Chris/Source/Repos/Assignment5MusicShopDec6/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kamok/Source/Repos/Assignment5MusicShopDec6/Views/Musics/Create.cshtml]
+[C:/Users/Chris/Source/Repos/Assignment5MusicShopDec6/Views/Musics/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXVzaWNzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kamok/Source/Repos/Assignment5MusicShopDec6/Views/Musics/Delete.cshtml]
+[C:/Users/Chris/Source/Repos/Assignment5MusicShopDec6/Views/Musics/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXVzaWNzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kamok/Source/Repos/Assignment5MusicShopDec6/Views/Musics/Details.cshtml]
+[C:/Users/Chris/Source/Repos/Assignment5MusicShopDec6/Views/Musics/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXVzaWNzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kamok/Source/Repos/Assignment5MusicShopDec6/Views/Musics/Edit.cshtml]
+[C:/Users/Chris/Source/Repos/Assignment5MusicShopDec6/Views/Musics/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXVzaWNzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kamok/Source/Repos/Assignment5MusicShopDec6/Views/Musics/Index.cshtml]
+[C:/Users/Chris/Source/Repos/Assignment5MusicShopDec6/Views/Musics/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXVzaWNzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kamok/Source/Repos/Assignment5MusicShopDec6/Views/Shared/Error.cshtml]
+[C:/Users/Chris/Source/Repos/Assignment5MusicShopDec6/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kamok/Source/Repos/Assignment5MusicShopDec6/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Chris/Source/Repos/Assignment5MusicShopDec6/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kamok/Source/Repos/Assignment5MusicShopDec6/Views/_ViewImports.cshtml]
+[C:/Users/Chris/Source/Repos/Assignment5MusicShopDec6/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kamok/Source/Repos/Assignment5MusicShopDec6/Views/_ViewStart.cshtml]
+[C:/Users/Chris/Source/Repos/Assignment5MusicShopDec6/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kamok/Source/Repos/Assignment5MusicShopDec6/Views/Shared/_Layout.cshtml]
+[C:/Users/Chris/Source/Repos/Assignment5MusicShopDec6/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-9ymj3dheqo
