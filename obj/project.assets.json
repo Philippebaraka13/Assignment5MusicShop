@@ -11209,23 +11209,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Chris\\.nuget\\packages\\": {},
+    "C:\\Users\\kamok\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Chris\\source\\repos\\Assignment5MusicShop\\Assignment5MusicShop.csproj",
+      "projectUniqueName": "C:\\Users\\kamok\\Source\\Repos\\Assignment5MusicShopDec6\\Assignment5MusicShop.csproj",
       "projectName": "Assignment5MusicShop",
-      "projectPath": "C:\\Users\\Chris\\source\\repos\\Assignment5MusicShop\\Assignment5MusicShop.csproj",
-      "packagesPath": "C:\\Users\\Chris\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Chris\\source\\repos\\Assignment5MusicShop\\obj\\",
+      "projectPath": "C:\\Users\\kamok\\Source\\Repos\\Assignment5MusicShopDec6\\Assignment5MusicShop.csproj",
+      "packagesPath": "C:\\Users\\kamok\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kamok\\Source\\Repos\\Assignment5MusicShopDec6\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Chris\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\kamok\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -11234,6 +11234,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
