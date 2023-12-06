@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Assignment5MusicShop.Data;
 using Assignment5MusicShop.Models;
+using Microsoft.Data.SqlClient;
 
 namespace Assignment5MusicShop.Controllers
 {
@@ -20,15 +21,17 @@ namespace Assignment5MusicShop.Controllers
         }
 
         // GET: Musics
-        public async Task<IActionResult> Index(string searchGenre)
+        public async Task<IActionResult> Index(string searchGenre, string searchPerformer)
         {
-            // Fetch the list of genres from the database
+            // Fetch the list of genres and performers from the database
             var genresQuery = _context.Music.Select(m => m.Genre).Distinct();
+            var performersQuery = _context.Music.Select(m => m.Performer).Distinct();
 
-            // Use ViewBag to pass the list of genres to the view
+            // Pass the lists to the view
             ViewBag.Genres = new SelectList(await genresQuery.ToListAsync());
+            ViewBag.Performers = new SelectList(await performersQuery.ToListAsync());
 
-            // Query for music; filter by genre if searchGenre is provided
+            // Query for music; filter by genre and/or performer if provided
             var musicQuery = _context.Music.AsQueryable();
 
             if (!string.IsNullOrEmpty(searchGenre))
@@ -36,9 +39,16 @@ namespace Assignment5MusicShop.Controllers
                 musicQuery = musicQuery.Where(m => m.Genre == searchGenre);
             }
 
-            var musicList = await musicQuery.ToListAsync();
-            return View(musicList);
+            if (!string.IsNullOrEmpty(searchPerformer))
+            {
+                musicQuery = musicQuery.Where(m => m.Performer == searchPerformer);
+            }
+
+            return View(await musicQuery.ToListAsync());
         }
+
+
+
 
 
         // GET: Musics/Details/5
